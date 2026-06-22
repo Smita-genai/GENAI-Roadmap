@@ -1,10 +1,8 @@
 import streamlit as st
 from groq import Groq
-from dotenv import load_dotenv
 
-
-load_dotenv()
-client = Groq()
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
+client = Groq(api_key=GROQ_API_KEY)
 
 # page config - controls the browser tab title and layout
 st.set_page_config(page_title="AI Assistant", page_icon="🤖")
@@ -17,7 +15,7 @@ and programming. Follow these rules:
 1.Be concise - answer in 3-5 sentences unless the user asks for more detail.
 2.If you are uncertain about a fact, say so briefly before answering.
 3.For real-time data (prices, scores, current events), say you cannot provide reliable current information.
-4.Be friendly but direct - no unneccesssary filler phrases."""
+4.Be friendly but direct - no unnecessary filler phrases."""
 
 # Session state stores the conversation history across reruns
 # Without this, the page reloads and forgets everything on every message send
@@ -49,7 +47,7 @@ if user_input := st.chat_input("Ask me anything..."):
         ],
         max_tokens = 500,
 
-        temperature = 0.3       # factual defualt
+        temperature = 0.3       # factual default
     )
 
     assistant_reply = response.choices[0].message.content
