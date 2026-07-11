@@ -4,7 +4,7 @@ An AI-powered resume optimizer for Indian IT professionals,
 built with a 3-step prompt chain and LLM-as-judge evaluation.
 
 ## Live Demo
-[Try it here](YOUR_STREAMLIT_URL)
+[Try it here](https://genai-roadmap-yyrnv8xyfnjuxieajj2fsr.streamlit.app)
 
 ## How it works
 1. **Analyse** — identifies ATS weaknesses and missing keywords
