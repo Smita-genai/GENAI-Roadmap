@@ -4,7 +4,7 @@ A Streamlit chat app that lets you switch between multiple free LLM providers
 (Groq, OpenRouter) mid-conversation, with chat history and error handling.
 
 ## Live Demo
-[Add your Streamlit Cloud URL here once deployed]
+[https://genai-roadmap-ja6oz89wbgad6bq8vjffff.streamlit.app]
 
 ## Features
 - Dropdown to switch between models (Groq Llama 3.3 70B, OpenRouter free models)
